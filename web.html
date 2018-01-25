@@ -344,7 +344,54 @@ if(mob.charCodeAt(0)!=48)
   document.getElementById("number").innerHTML="";
  }
  }*/
-                
+                <!--<html>
+<head>
+<title>Form</title>
+
+	 <script>
+		
+    
+  
+	
+function storeData(){
+
+    var fullname= document.getElementById("fullname").value;
+    var ic= document.getElementById("icnumber").value;
+    var email= document.getElementById("mail").value;
+    var mobile= document.getElementById("numb").value;
+    var id = 1;
+        id++;
+     var test = localStorage.getItem("test");
+     var obj = [];
+     if(test){
+         obj= JSON.parse(test);  
+     }
+     obj.push({"id":  id, "name":fullname, "IC":ic, "Email":email, "Phone":mobile});
+     localStorage.setItem("test",JSON.stringify(obj));
+
+ }
+
+        </script>
+</head>
+<body>
+<form onsubmit = "return storeData();">
+	<p><span>*</span> indicates required field</p><br/>
+	<p>Full Name <span>*</span></p>
+	<p><input type = "text"  id = "fullname" /></p><br/>
+	<p>Identity Card Number<span>*</span></p>
+	<p><input type = "text" id = "icnumber" name = "icnumber" required/></p><br/>
+	<p>Email Address <span>*</span></p>
+	<p><input type = "text" id = "mail" /></p><br/>
+	<span id="email" style="color:red;"></span><br/>
+	<p>Phone Number <span>*</span></p>
+	<p><input type = "text"  id = "numb" /></p><br/>
+	<span id="number" style="color:red;"></span><br/>
+	<p><input type = "checkbox" id = "tnc" name = "tnc" required/> I have read and agreed to the <a href = "#">Terms &amp; Conditions</a></p><br/>
+    <p><input type = "submit" name = "submit" value = "Submit"/></p>
+	<div id = "state"></div>
+</form>
+</body>
+</html>-->
 </style>
 </head>
 <body>
